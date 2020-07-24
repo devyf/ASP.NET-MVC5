@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "MyDefineView";
+}
+
+@using WebApplication01.Models;
+@model IEnumerable<User>
+
+<ul>
+    @foreach (User user in Model)
+    {
+        <li>@user.Name</li>
+        <li>@user.Age</li>
+    }
+</ul>
+<h2>我自定义的一个视图界面</h2>
+
