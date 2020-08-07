@@ -1,0 +1,30 @@
+﻿@model MVC5Character06.Models.UserInfo
+@{
+    ViewBag.Title = "显示";
+}
+
+<style>
+    table {
+        border:1px solid #808080;
+    }
+    table td {
+        border: 1px solid #808080;
+    }
+</style>
+
+<h2>用户信息</h2>
+<table>
+    <tr>
+        <td>姓名：</td>
+        <td>@Html.DisplayFor(model => model.username)</td>
+    </tr>
+    <tr>
+        <td>年龄：</td>
+        <td>@Html.DisplayFor(model => model.age)</td>
+    </tr>
+    <tr>
+        <td>性别：</td>
+        <td>@Html.DisplayFor(model => model.sex)</td>
+    </tr>
+</table>
+

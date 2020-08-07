@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!--清除原有Index元素，构建表单注册提交页面-->
+<form action="/Home/Register7" method="post">
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="2">用户注册</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>用户名：</td>
+                <td>
+                    <input type="text" name="username">
+                </td>
+            </tr>
+            <tr>
+                <td>年龄：</td>
+                <td>
+                    <input type="text" name="age">
+                </td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <select name="sex">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="注册">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
