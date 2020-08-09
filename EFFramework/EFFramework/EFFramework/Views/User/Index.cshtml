@@ -1,0 +1,60 @@
+﻿@model IEnumerable<EFFramework.Models.td_user>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form action="/User/Search" method="post">
+    请输入用户名查询：<input type="text" name="username"/>
+    角色：<select name="role">
+            <option>管理员</option>
+            <option>普通员工</option>
+          </select>
+    <input type="submit" value="查询">
+</form>
+
+<p>
+    @Html.ActionLink("新建", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           名称
+        </th>
+        <th>
+           密码
+        </th>
+        <th>
+            电子邮箱
+        </th>
+        <th>
+            角色
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassWord)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.UserId }) |
+            @Html.ActionLink("查看", "Details", new { id=item.UserId }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.UserId })
+        </td>
+    </tr>
+}
+
+</table>
