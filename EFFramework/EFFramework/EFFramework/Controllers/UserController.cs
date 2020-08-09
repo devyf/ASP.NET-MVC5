@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace EFFramework.Controllers
 {
+    [UserAuthorizeAttribute]
     public class UserController : Controller
     {
         // GET: User
